@@ -1,0 +1,80 @@
+.left-side{
+    height: 88vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.hi {
+  font-weight:bold; 
+  font-size:24px;
+  color:#3c6e71;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(50) 1;
+  }
+  
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  
+.typing-effect {
+    width:50%;
+    opacity: 0;
+    animation: fadeInAnimation 2s ease-in forwards;
+}
+  
+@keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.container-info{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-contact{
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column;
+    align-items: start;
+    gap: 7px;
+}
+.contact-btn{
+    border: 0;
+    padding: 10px;
+    border-radius: 4px;
+    width: 30%;
+    font-weight: bold;
+    background-color: #1A181B;
+    color: #CDD7D6;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .typing-effect{
+    width: 95%;
+  }
+  .hi{
+    width: 95%;
+    font-size: 20px;
+  }
+}

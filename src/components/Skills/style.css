@@ -1,0 +1,36 @@
+.container-skills{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.sk {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in forwards;
+}
+
+.sk-hidden{
+  opacity: 0;
+}
+.nons{
+  visibility: hidden;
+}
+  
+@keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .sk {
+      display: flex;
+      
+      opacity: 0;
+      animation: fadeInAnimation 1s ease-in forwards;
+  }
+}

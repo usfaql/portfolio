@@ -1,0 +1,119 @@
+
+
+.no-container-projects{
+    display: none;
+}
+.btn{
+    margin-top: 10px;
+    background-color: #1A181B;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #CDD7D6;
+    font-weight: bold;
+    border: 1px solid #CDD7D6;
+    width: 45%;
+}
+.btn:active{
+    background-color: #CDD7D6;
+    color: #1A181B;
+    border: 1px solid;
+}
+.code{
+    width: 50%;
+    height: 100vh;
+    font-size: 14px;
+}
+.code-anim {
+    width: 50%;
+    height: 100vh;
+    font-size: 14px;
+    display: inline;
+    opacity: 1;
+    animation: fadeInAnimation-code 1s ease-out forwards;
+}
+
+@keyframes fadeInAnimation-code {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+        display: none;
+    }
+  }
+
+  .container-projects{
+    padding-top: 20px;
+    height: 100vh;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeInAnimations 1s ease-in forwards;
+}
+  @keyframes fadeInAnimations {
+    from {
+      opacity: 0;
+    }
+    to {  
+      opacity: 1;
+    }
+  }
+.code-view{
+    width: 96.5%;
+    height: 80%;
+}
+.run-code{
+    border: 0;
+    padding: 10px;
+    background-color: #1A181B;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+}
+.run-code:active{
+    background-color: green;
+}
+.conter-project{
+  width: 45%;
+}
+@media only screen and (max-width: 600px) {
+  .container-projects{
+    width: 100%;
+    height: max-content;
+    padding-bottom: 20px;
+  }
+  .con-project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+ 
+    width: 100%;
+    height: max-content;
+    padding: 0;
+    flex-direction: column;
+  }
+
+
+  .conter-project{
+    width: 80%;
+  }
+  .code{
+    width: 80%;
+  }
+
+  .code-anim {
+    width: 80%;
+    height: 100vh;
+    font-size: 14px;
+    display: inline;
+    opacity: 1;
+    animation: fadeInAnimation-code 1s ease-out forwards;
+}
+
+}
