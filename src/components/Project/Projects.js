@@ -1,7 +1,15 @@
 import React, { useState } from 'react'
 import './style.css'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { cb, coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import 'bootstrap/dist/css/bootstrap.css'; 
+import Carousel from 'react-bootstrap/Carousel'; 
+import loginNutri from '../assets/NuriFit/Login.png';
+import registerNutri from '../assets/NuriFit/Register.png';
+import myGymNutri from '../assets/NuriFit/mygym.png';
+import myPrivateNutri from '../assets/NuriFit/myprivate.png';
+import recipeNutri from '../assets/NuriFit/recipes.png';
+import oneRecipeNutri from '../assets/NuriFit/oneRecipes.png';
+import allgymNutri from '../assets/NuriFit/allgymbyuser.png';
+
 function Projects() {
   const [runCode, setRunCode] = useState(false);
 
@@ -12,129 +20,111 @@ function Projects() {
   setShowCode(true);
   setTimeout(() => setShowProjects(true)
   
-  , 1000); // تأخير ظهور container-projects بعد اختفاء code-anim
+  , 1000);
   };
-  const codeString = `
-  <div>
-  <h2>Projects</h2>
-  <div>
-    <div>
-      <h3>Friendly</h3>
-        <p>Solo</p>
-        <p>A social networking platform that enables users to easily publish their posts,
-        whether they are texts, photos, or short videos.
-        The platform allows active interaction where users can interact 
-        with each other's posts and express their opinions and interests</p>
-        <p>Technologies used</p>
-        <div>
-          <ul>
-          <span>FrontEnd</span>
-          <li>React</li>
-          <li>JavaScript</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          </ul>
 
-          <ul>
-              <span>Backend</span>
-          <li>NodeJs</li>
-          <li>ExpressJs</li>
-          <li>MongoDB (NoSQL)</li>
-          <li>Postgresql (SQL)</li>
-          </ul>
-        </div>
-      <div>
-        <a>Preview</a>
-        <a>Source Code</a>
-      </div>
-    </div>
-  <div>
-    <h3>NutriFit</h3>
-    <p>Team</p>
-    <p> a health electronic platform that offers three core services:
-    <br/>1- Providing users with healthy meal options along with detailed nutritional
-    information for each dish.
-    <br/>2- Facilitating direct communication between users and their personal
-    trainers. This allows trainers to tailor meal plans and exercise routines to the
-    user's specific needs and body type.
-    <br/> <span>3- Empowering coaches to deliver targeted information to groups of
-    individuals through electronic gym.</span></p>
-
-    <p>Technologies used</p>
-    <div>
-        
-    <ul>
-    <span>FrontEnd</span>
-    <li>React</li>
-    <li>JavaScript</li>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>Redux</li>
-    </ul>
-
-    <ul>
-    <span>Backend</span>
-    <li>NodeJs</li>
-    <li>ExpressJs</li>
-    <li>MongoDB (NoSQL)</li>
-    <li>Postgresql (SQL)</li>
-    </ul>
-    
-  </div>
-  <div>
-    <a>Preview</a>
-    <a>Source Code</a>
-  </div>
-  </div>
-</div>
-  
-</div>`
-  return (
-    <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+  return (    
+    <div id='project' className='container-projects'>
     <h2 id='project' style={{height:"20%"}}>Projects</h2>
-    <div style={{display:"flex", justifyContent:"center"}}>
-    
-    <div id='project' className={showProjects ? 'container-projects' : "no-container-projects"}>
-    
-    <div className='con-project' style={{display:"flex", justifyContent:"space-between", height:"80%"}}>
-
     <div className='conter-project'>
-      <h3 style={{color:"#3C6E71"}}>Friendly</h3>
-        <p>Solo</p>
-        <p style={{color:"#3C6E71", textAlign:"start", paddingTop:"10px"}}>A social networking platform that enables users to easily publish their posts, whether they are texts, photos, or short videos. The platform alows active interaction where users can interact with each other's posts and express their opinions and interests</p>
+      <h3 style={{color:"#3C6E71" , paddingLeft:"5px", margin:"0"}}>Friendly (Solo)</h3>
+      <p style={{ textAlign:"start", fontWeight:"500", paddingLeft:"5px", margin:"0"}}>A social networking platform that enables users to easily publish their posts, whether they are texts, photos, or short videos. The platform alows active interaction where users can interact with each other's posts and express their opinions and interests</p>
 
-        <p style={{textAlign:"start", paddingTop:"10px", fontWeight:"bold"}}>Technologies used</p>
-        <div style={{display:"flex", justifyContent:"center"}}>
-            
-        <ul style={{width:"50%", display:"flex", textAlign:"start", flexDirection:"column", paddingTop:"10px", paddingRight:"25px", paddingLeft:"25px"}}>
-        <span style={{color:'#3C6E71', fontWeight:"bold"}}>FrontEnd</span>
-        <li>React</li>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        </ul>
+      <div style={{ display: 'block', width: '100%', padding: "5px", borderRadius:"8px" }}> 
+      <Carousel> 
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={loginNutri}
+            alt="Login Page"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={registerNutri}
+            alt="Register Page"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
 
-        <ul style={{width:"50%", display:"flex", textAlign:"start", flexDirection:"column", paddingTop:"10px"}}>
-            <span style={{color:'#3C6E71', fontWeight:"bold"}}>Backend</span>
-        <li>NodeJs</li>
-        <li>ExpressJs</li>
-        <li>MongoDB (NoSQL)</li>
-        <li>Postgresql (SQL)</li>
-        </ul>
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={myGymNutri}
+            alt="My Gym Joined & Created"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
+
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={allgymNutri}
+            alt="All Gyms for All"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={myPrivateNutri}
+            alt="Private for Coach"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
+
+
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={recipeNutri}
+            alt="Recipes for All"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
+
+
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={oneRecipeNutri}
+            alt="details for recipe"
+            style={{borderRadius:"8px"}}
+          />
+        </Carousel.Item> 
+        </Carousel> 
+
+
+      </div> 
+        <p style={{textAlign:"start", paddingTop:"10px", fontWeight:"bold", margin:"0", paddingLeft:"5px"}}>Technologies used</p>
+        <div style={{display:"flex", justifyContent:"start", overflowX:"auto", paddingLeft:"5px"}}>
         
+        <ul style={{display:"flex", textAlign:"start", flexDirection:"row", paddingTop:"10px",flexWrap:"wrap", paddingLeft:"25px", listStyle:"none", gap:"10px",paddingLeft:"0",overflowY:"hidden", justifyContent:"start", alignItems:"start"}}>
+        <li className='list-front' style={{color:'#3C6E71', fontWeight:"bold",backgroundColor:"transparent", border:"1px solid #3C6E71"}}>FrontEnd</li>
+        <li className='list-front'>React</li>
+        <li className='list-front'>JavaScript</li>
+        <li className='list-front'>HTML</li>
+        <li className='list-front'>CSS</li>
+        <li className='list-front' style={{color:'#1A181B', fontWeight:"bold",backgroundColor:"transparent", border:"1px solid #1A181B"}}>Backend</li>
+        <li className='list-backend'>NodeJs</li>
+        <li className='list-backend' >ExpressJs</li>
+        <li className='list-backend'>MongoDB</li>
+        </ul>
+
         </div>
-        <div style={{display:"flex", justifyContent:"space-between"}}>
+        <div style={{display:"flex", justifyContent:"center"}}>
         
-        <a href='https://github.com/C9-usfaql/MERAKI_Academy_Project_4' target='_blank' className='btn'>Preview</a>
-        <a href='https://github.com/C9-usfaql/MERAKI_Academy_Project_4' target='_blank' className='btn'>Source Code</a>
+        <a href='https://github.com/C9-usfaql/MERAKI_Academy_Project_4' target='_blank' className='btnS'>Preview</a>
+        <a href='https://github.com/C9-usfaql/MERAKI_Academy_Project_4' target='_blank' className='btnS'>Source Code</a>
         </div>
         
       </div>
 
       <div className='conter-project'>
-      <h3 style={{color:"#3C6E71"}}>NutriFit</h3>
-        <p>Team</p>
-        <p style={{color:"#3C6E71", textAlign:"start", paddingTop:"10px"}}> a health electronic platform that offers three core services:
+      <h3 style={{color:"#3C6E71", paddingLeft:"5px", margin:"0"}}>NutriFit (Team)</h3>
+        <p style={{ textAlign:"start", fontWeight:"500",paddingLeft:"5px", margin:"0"}}> a health electronic platform that offers three core services:
         <br/>1- Providing users with healthy meal options along with detailed nutritional
         information for each dish.
         <br/>2- Facilitating direct communication between users and their personal
@@ -143,55 +133,102 @@ function Projects() {
         <br/> <span style={{paddingTop:"5px"}}>3- Empowering coaches to deliver targeted information to groups of
         individuals through electronic gym.</span></p>
 
-        <p style={{textAlign:"start", paddingTop:"10px", fontWeight:"bold"}}>Technologies used</p>
-        <div style={{display:"flex", justifyContent:"center"}}>
-            
-        <ul style={{width:"50%", display:"flex", textAlign:"start", flexDirection:"column", paddingTop:"10px" , paddingRight:"25px", paddingLeft:"25px"}}>
-        <span style={{color:'#3C6E71', fontWeight:"bold"}}>FrontEnd</span>
-        <li>React</li>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Redux</li>
+        <div style={{ display: 'block', width: '100%', padding: "5px", borderRadius:"8px" }}> 
+      <Carousel> 
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={loginNutri}
+            alt="Login Page"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={registerNutri}
+            alt="Register Page"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
+
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={myGymNutri}
+            alt="My Gym Joined & Created"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
+
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={allgymNutri}
+            alt="All Gyms for All"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={myPrivateNutri}
+            alt="Private for Coach"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
+
+
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={recipeNutri}
+            alt="Recipes for All"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
+
+
+        <Carousel.Item interval={2500}> 
+          <img 
+            className="d-block w-100"
+            src={oneRecipeNutri}
+            alt="details for recipe"
+            style={{borderRadius:"8px"}}
+          /> 
+        </Carousel.Item> 
+        </Carousel> 
+
+
+      </div> 
+        <p style={{textAlign:"start", paddingTop:"10px", fontWeight:"bold", margin:"0", paddingLeft:"5px"}}>Technologies used</p>
+        <div style={{display:"flex", justifyContent:"start", overflowX:"auto", paddingLeft:"5px"}}>
+        
+        <ul style={{display:"flex", textAlign:"start", flexDirection:"row", paddingTop:"10px",flexWrap:"wrap", paddingLeft:"25px", listStyle:"none", gap:"10px",paddingLeft:"0",overflowY:"hidden", justifyContent:"start", alignItems:"start"}}>
+        <li className='list-front' style={{color:'#3C6E71', fontWeight:"bold",backgroundColor:"transparent", border:"1px solid #3C6E71"}}>FrontEnd</li>
+        <li className='list-front'>React</li>
+        <li className='list-front'>Redux</li>
+        <li className='list-front'>socket.io-client</li>
+        <li className='list-front'>JavaScript</li>
+        <li className='list-front'>HTML</li>
+        <li className='list-front'>CSS</li>
+        <li className='list-front' style={{color:'#1A181B', fontWeight:"bold",backgroundColor:"transparent", border:"1px solid #1A181B"}}>Backend</li>
+        <li className='list-backend'>NodeJs</li>
+        <li className='list-backend' >ExpressJs</li>
+        <li className='list-backend'>socket.io</li>
+        <li className='list-backend'>MongoDB</li>
+        <li className='list-backend'>Postgresql</li>
         </ul>
 
-        <ul style={{width:"50%", display:"flex", textAlign:"start", flexDirection:"column", paddingTop:"10px"}}>
-            <span style={{color:'#3C6E71', fontWeight:"bold"}}>Backend</span>
-        <li>NodeJs</li>
-        <li>ExpressJs</li>
-        <li>MongoDB (NoSQL)</li>
-        <li>Postgresql (SQL)</li>
-        </ul>
-        
         </div>
-        <div style={{display:"flex", justifyContent:"space-between"}}>
+        <div style={{display:"flex", justifyContent:"center"}}>
         
-        <a href='https://github.com/C9-usfaql/MERAKI_Academy_Project_4' target='_blank' className='btn'>Preview</a>
-        <a href='https://github.com/C9-usfaql/MERAKI_Academy_Project_4' target='_blank' className='btn'>Source Code</a>
+        <a href='https://github.com/C9-usfaql/MERAKI_Academy_Project_4' target='_blank' className='btnS'>Preview</a>
+        <a href='https://github.com/C9-usfaql/MERAKI_Academy_Project_4' target='_blank' className='btnS'>Source Code</a>
         </div>
       </div>
-    </div>
       
     </div>
-    
-
-    </div>
-    <div className={showCode ? 'code-anim' : 'code'}>
-      <p style={{color:"#D64045"}}>Please run the code from below to show the projects</p>
-    <SyntaxHighlighter language="html" style={cb} className="code-view">
-        {codeString.trim()}
-      </SyntaxHighlighter>
-      <div style={{display:"flex", justifyContent:"end"}}>
-        <button className='run-code' onClick={handleRunCode}>
-        <svg svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-        <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
-        </svg>
-        Run Code
-        </button>
-      </div>
-    </div>
-    </div>
-
     
   )
 }

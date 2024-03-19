@@ -1,85 +1,60 @@
-
-
-.no-container-projects{
-    display: none;
-}
-.btn{
-    margin-top: 10px;
-    background-color: #1A181B;
+.btnS{
+    background-color: #3C6E71;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 8px;
     text-decoration: none;
     color: #CDD7D6;
     font-weight: bold;
     border: 1px solid #CDD7D6;
-    width: 45%;
+    width: 49.5%;
 }
-.btn:active{
+.btnS:active{
     background-color: #CDD7D6;
     color: #1A181B;
     border: 1px solid;
 }
-.code{
-    width: 50%;
-    height: 100vh;
-    font-size: 14px;
-}
-.code-anim {
-    width: 50%;
-    height: 100vh;
-    font-size: 14px;
-    display: inline;
-    opacity: 1;
-    animation: fadeInAnimation-code 1s ease-out forwards;
-}
 
-@keyframes fadeInAnimation-code {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-        display: none;
-    }
-  }
-
-  .container-projects{
+.container-projects{
     padding-top: 20px;
-    height: 100vh;
+    height: fit-content;
     display: flex;
-    width: 80%;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    gap: 20px;
     justify-content: center;
-    opacity: 0;
-    animation: fadeInAnimations 1s ease-in forwards;
 }
-  @keyframes fadeInAnimations {
-    from {
-      opacity: 0;
-    }
-    to {  
-      opacity: 1;
-    }
-  }
-.code-view{
-    width: 96.5%;
-    height: 80%;
-}
-.run-code{
-    border: 0;
-    padding: 10px;
-    background-color: #1A181B;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    color: white;
-    border-radius: 4px;
-}
-.run-code:active{
-    background-color: green;
-}
+ 
 .conter-project{
-  width: 45%;
+  width: 65%;
+  border: 4px solid #3C6E71;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: start;
+}
+
+.list-front{
+  background-color: #3C6E71;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 10px;
+  padding-top: 7px;
+  color: #CDD7D6;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.list-backend{
+  background-color: #1A181B;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 10px;
+  padding-top: 7px;
+  color: #CDD7D6;
+  font-weight: bold;
+  border-radius: 8px;
 }
 @media only screen and (max-width: 600px) {
   .container-projects{
@@ -92,13 +67,11 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
- 
     width: 100%;
     height: max-content;
     padding: 0;
     flex-direction: column;
   }
-
 
   .conter-project{
     width: 80%;

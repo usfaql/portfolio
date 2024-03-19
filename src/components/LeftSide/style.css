@@ -1,14 +1,43 @@
 .left-side{
     height: 88vh;
     padding: 0;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
 }
+.center-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.container-info{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.container-skillss{
+display: flex;
+text-align: center;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+width: 50%;
+justify-content: center;
+align-items: center;
+}
 .hi {
   font-weight:bold; 
   font-size:24px;
+  padding-top: 20px;
   color:#3c6e71;
   overflow: hidden;
   white-space: nowrap;
@@ -27,7 +56,6 @@
 
   
 .typing-effect {
-    width:50%;
     opacity: 0;
     animation: fadeInAnimation 2s ease-in forwards;
 }
@@ -40,15 +68,7 @@
       opacity: 1;
     }
   }
-.container-info{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 .container-contact{
     display: flex;
     justify-content:flex-end;
@@ -70,6 +90,15 @@
 
 
 @media only screen and (max-width: 600px) {
+  .left-side{
+    height: max-content;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
   .typing-effect{
     width: 95%;
   }
@@ -77,4 +106,14 @@
     width: 95%;
     font-size: 20px;
   }
+  .center-info{
+    display: flex;
+    flex-direction: column;
+  }
+  .container-info{
+    width: 100%;
+  }
+  .container-skillss{
+    width: 100%;
+    }
 }
