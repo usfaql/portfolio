@@ -10,6 +10,7 @@ import mongo from "../assets/skills/MongoDB.png"
 import postGress from "../assets/skills/Postgresql.png"
 import postman from "../assets/skills/Postman.png"
 import git from "../assets/skills/Git.png"
+import ProgressBar from 'react-bootstrap/ProgressBar';
 function Skills() {
 
   const [isVisible, setIsVisible] = useState(false);
@@ -21,73 +22,74 @@ function Skills() {
   window.addEventListener('scroll', handleScroll);
   return (
     <div id="skills" className='container-skills'>
-      <div style={{padding:"20px 0", width:"100%",height:"90%", display:"flex", justifyContent:"center",
-    flexDirection:"column", alignItems:"center"}}>
+      <div className='sk-top' style={{padding:"20px 0", width:"50%",height:"90%", display:"flex", justifyContent:"center",
+        flexDirection:"column", alignItems:"center"}}>
         <h2 style={{height:"10%"}}>Skills</h2>
 
-        <div className={isVisible? 'sk' : "sk-hidden"} style={{display:"flex" , gap:"10px", flexWrap:"wrap", width:"40%", justifyContent:"center", alignItems:"center"}}>
-          <div style={{display:"flex"}}>
-            <div style={{color:"#3C6E71", padding:"5px", borderRadius:"8px"}}>
-              <img style={{width:"96px"}} src={html}/>
-              <p style={{fontWeight:"bold", fontSize:"18px"}}>HTML</p>                
-            </div>
-    
-            <div style={{ padding:"5px", borderRadius:"8px", }}>
-              <img style={{width:"96px"}} src={css}/>
-              <p style={{color:"#3C6E71", fontWeight:"bold", fontSize:"18px"}}>CSS</p>
-            </div>
-          </div>
-            
-          <div style={{display:"flex"}}>
-            <div style={{ padding:"5px", borderRadius:"8px", }}>
-            <img style={{width:"96px", borderRadius:"8px"}} src={js}/>
-            <p style={{color:"#3C6E71", fontWeight:"bold", fontSize:"18px"}}>JavaScript</p>
-            </div>
-
-            <div style={{ padding:"5px", borderRadius:"8px", }}>
-            <img style={{width:"96px"}} src={react}/>
-            <p style={{color:"#3C6E71", fontWeight:"bold", fontSize:"18px"}}>React</p>
-            </div>
-          </div>
-
-          <div style={{display:"flex"}}>
-            <div style={{ padding:"5px", borderRadius:"8px"}}>
-            <img style={{width:"96px",height:"100px", objectFit:"contain"}} src={node}/>
-            <p style={{color:"#3C6E71", fontWeight:"bold", fontSize:"18px"}}>NodeJs</p>
-            </div>
-            <div style={{ padding:"5px", borderRadius:"8px"}}>
-            <img style={{width:"96px",height:"100px", objectFit:"contain"}} src={express}/>
-            <p style={{color:"#3C6E71", fontWeight:"bold", fontSize:"18px"}}>Expressjs</p>
-            </div>
-          </div>
-
-
-          <div style={{display:"flex"}}>
-            <div style={{ padding:"5px", borderRadius:"8px"}}>
-            <img style={{width:"96px",height:"100px", objectFit:"contain"}} src={mongo}/>
-            <p style={{color:"#3C6E71", fontWeight:"bold", fontSize:"18px"}}>MongoDB</p>
-            </div>
-
-            <div style={{ padding:"5px", borderRadius:"8px"}}>
-            <img style={{width:"96px"}} src={postGress}/>
-            <p style={{color:"#3C6E71", fontWeight:"bold", fontSize:"18px"}}>Postgresql</p>
-            </div>
-          </div>
-            
-          <div style={{display:"flex"}}>
-            <div style={{ padding:"5px", borderRadius:"8px"}}>
-            <img style={{width:"96px",height:"100px", objectFit:"contain"}} src={postman}/>
-            <p style={{color:"#3C6E71", fontWeight:"bold", fontSize:"18px"}}>POSTMAN</p>
-            </div>
-
-            <div style={{ padding:"5px", borderRadius:"8px"}}>
-            <img style={{width:"96px"}} src={git}/>
-            <p style={{color:"#3C6E71", fontWeight:"bold", fontSize:"18px"}}>GIT</p>
-            </div>
-          </div>
-
-
+        <div className='sk' style={{width:"100%", display:"flex", flexDirection:"row",flexWrap:"wrap",overflowY:"hidden", gap:"10px", textAlign:"start"}}>
+        <div style={{width:"100%", display:"flex" , justifyContent:"space-between"}}>
+        <div style={{width:"49%"}}>
+          <span>HTML</span>
+          <ProgressBar now={96} label={`96%`} variant='danger' style={{backgroundColor:"#393e41"}}/>
         </div>
+        <div style={{width:"49%"}}>
+        <span>CSS</span>
+        <ProgressBar  now={85} label={`85%`} variant='danger' style={{backgroundColor:"#393e41"}}/>
+        </div>
+        </div>
+        
+        <div style={{width:"100%", display:"flex" , justifyContent:"space-between"}}>
+          <div style={{width:"49%"}}>
+        <span>JS</span>
+        <ProgressBar now={92} label={`92%`} variant='danger' style={{backgroundColor:"#393e41"}}/>
+        </div>
+        <div style={{width:"49%"}}>
+        <span>React</span>
+        <ProgressBar now={93} label={`93%`} variant='danger' style={{backgroundColor:"#393e41"}}/>
+        </div>   
+        </div>
+             
+
+
+        <div style={{width:"100%", display:"flex" , justifyContent:"space-between"}}>
+          <div style={{width:"49%"}}>
+        <span>NodeJs</span>
+        <ProgressBar now={97} label={`97%`} variant='danger' style={{backgroundColor:"#393e41"}}/>
+        </div>        
+        <div style={{width:"49%"}}>
+        <span>ExpressJs</span>
+        <ProgressBar now={98} label={`98%`} variant='danger' style={{backgroundColor:"#393e41"}}/>
+        </div> 
+        </div>
+        
+
+        <div style={{width:"100%", display:"flex" , justifyContent:"space-between"}}>
+          <div style={{width:"49%"}}>
+        <span>MongoDB</span>
+        <ProgressBar now={94} label={`94%`} variant='danger' style={{backgroundColor:"#393e41"}}/>
+        </div>        
+        <div style={{width:"49%"}}>
+        <span>Postgresql</span>
+        <ProgressBar now={90} label={`90%`} variant='danger' style={{backgroundColor:"#393e41"}}/>
+        </div>
+        </div>
+        
+
+        <div style={{width:"100%", display:"flex" , justifyContent:"space-between"}}>
+          <div style={{width:"49%"}}>
+        <span>POSTMAN</span>
+        <ProgressBar now={99} label={`99%`} variant='danger' style={{backgroundColor:"#393e41"}}/>
+        </div>
+        <div style={{width:"49%"}}>
+        <span>GIT</span>
+        <ProgressBar now={97} label={`97%`} variant='danger' style={{backgroundColor:"#393e41"}}/>
+        </div>
+        </div>
+        
+        
+        
+        
+    </div>
       </div>
     </div>
   )

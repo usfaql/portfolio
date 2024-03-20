@@ -30,6 +30,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <LeftSide/>
+      <Skills/>
       <Projects/>
 
       <ContactUs/>

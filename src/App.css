@@ -7,10 +7,10 @@
   margin: 0;
   text-align: center;
   justify-content: center;
-  background-color: #CDD7D6;
+  background-color: #00171f;
   display: flex;
   flex-direction: column;
-  color: #1A181B;
+  color: #f6f7eb;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 

@@ -1,5 +1,5 @@
 .left-side{
-    height: 88vh;
+    height: 60vh;
     padding: 0;
     width: 100vw;
     display: flex;
@@ -38,7 +38,7 @@ align-items: center;
   font-weight:bold; 
   font-size:24px;
   padding-top: 20px;
-  color:#3c6e71;
+  color:#e94f37;
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3s steps(50) 1;
@@ -57,6 +57,7 @@ align-items: center;
   
 .typing-effect {
     opacity: 0;
+    color: #f6f7eb;
     animation: fadeInAnimation 2s ease-in forwards;
 }
   
@@ -75,14 +76,15 @@ align-items: center;
     flex-direction: column;
     align-items: start;
     gap: 7px;
+    
 }
 .contact-btn{
     border: 0;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 8px;
     width: 30%;
     font-weight: bold;
-    background-color: #1A181B;
+    background-color: #e94f37;
     color: #CDD7D6;
     cursor: pointer;
 }
@@ -116,4 +118,7 @@ align-items: center;
   .container-skillss{
     width: 100%;
     }
+    .contact-btn{
+      width: 60%;
+  }
 }

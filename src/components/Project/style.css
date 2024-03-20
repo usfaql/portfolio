@@ -1,92 +1,77 @@
-.btnS{
-    background-color: #3C6E71;
-    padding: 10px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #CDD7D6;
-    font-weight: bold;
-    border: 1px solid #CDD7D6;
-    width: 49.5%;
-}
-.btnS:active{
-    background-color: #CDD7D6;
-    color: #1A181B;
-    border: 1px solid;
-}
-
 .container-projects{
-    padding-top: 20px;
-    height: fit-content;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 25px;
-    gap: 20px;
     justify-content: center;
 }
- 
-.conter-project{
-  width: 65%;
-  border: 4px solid #3C6E71;
-  border-radius: 8px;
-  padding: 10px;
+.div-project{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cont-info-project{
+  width: 70%;
+  height: 50%;
+  justify-content: center;
+  display: flex;
   text-align: start;
+  gap: 10px;
 }
-
-.list-front{
-  background-color: #3C6E71;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-bottom: 10px;
-  padding-top: 7px;
-  color: #CDD7D6;
-  font-weight: bold;
+.cont-image{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.image-project{
+  width: 100%;
   border-radius: 8px;
 }
 
-.list-backend{
-  background-color: #1A181B;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-bottom: 10px;
-  padding-top: 7px;
-  color: #CDD7D6;
+.cont-info{
+  width: 100%;
+}
+.name-project{
+  color: #e94f37;
+}
+
+.container-button{
+  display: flex;
+  gap: 4px;
+}
+.btn-project{
+  padding: 5px;
+  border: 0;
+  border-radius: 4px;
   font-weight: bold;
-  border-radius: 8px;
+  color: #e94f37;
+}
+.source{
+  background-color: #e94f37;
+  color: #f6f7eb;
 }
 @media only screen and (max-width: 600px) {
   .container-projects{
-    width: 100%;
-    height: max-content;
-    padding-bottom: 20px;
+    height: auto;
   }
-  .con-project{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    height: max-content;
-    padding: 0;
+  .div-project{
+    height:auto;
+    gap:30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .cont-info-project{
+    height: auto;
     flex-direction: column;
   }
-
-  .conter-project{
-    width: 80%;
-  }
-  .code{
-    width: 80%;
-  }
-
-  .code-anim {
-    width: 80%;
-    height: 100vh;
-    font-size: 14px;
-    display: inline;
-    opacity: 1;
-    animation: fadeInAnimation-code 1s ease-out forwards;
+.cont-image{
+  width: 100%;
 }
 
 }
+
+

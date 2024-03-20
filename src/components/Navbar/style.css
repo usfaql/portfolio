@@ -7,11 +7,11 @@ justify-content: center;
     display:flex;
     width: 80%;
     justify-content:space-between;
-    background-color:#1A181B;
+    background-color:#393e41;
     text-align: center;
     align-items: center;
     font-size:14px;
-    color:#CDD7D6;
+    color:#f6f7eb;
     padding:10px;
     margin:15px;
     border-radius:12px;
@@ -21,7 +21,7 @@ justify-content: center;
     gap: 5px;
 }
 .btn-nav{
-    background-color: #CDD7D6;
+    background-color: #f6f7eb;
     padding: 6px;
     font-weight: bold;
     border: 0;
@@ -29,20 +29,24 @@ justify-content: center;
     border-radius: 6px;
 }
 .btn-nav:hover{
-    background-color: #a5adad;
+    background-color: #393e41;
+    border: 1px solid #f6f7eb;
+    color: #f6f7eb;
+
 }
 
 .btn-nav:active{
-    background-color: #1A181B;
+    background-color: #393e41;
     padding: 6px;
     border: 0;
-    color: #CDD7D6;
+    color: #f6f7eb;
     font-weight: bold;
     border-radius: 6px;
 }
 .title{
     font-size: 24px;
     font-weight: bold;
+    margin: 0;
 }
 @media only screen and (max-width: 600px) {
     .title{
