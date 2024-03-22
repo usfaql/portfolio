@@ -5,52 +5,51 @@ justify-content: center;
 
 .child-nav-bar{
     display:flex;
-    width: 80%;
+    width: 74%;
     justify-content:space-between;
-    background-color:#393e41;
     text-align: center;
     align-items: center;
     font-size:14px;
-    color:#f6f7eb;
     padding:10px;
     margin:15px;
+    margin-right: 10px;
+    padding-right: 0;
     border-radius:12px;
 }
 .continar-btn-nav{
     display: flex;
-    gap: 5px;
 }
 .btn-nav{
-    background-color: #f6f7eb;
-    padding: 6px;
+    padding: 10px;
     font-weight: bold;
-    border: 0;
-    
+    border: 1px solid #282828;
+    background: linear-gradient(340deg, #131313 0%, #212121 100%);
+    color: white;
     border-radius: 6px;
 }
 .btn-nav:hover{
-    background-color: #393e41;
-    border: 1px solid #f6f7eb;
-    color: #f6f7eb;
-
+    box-shadow: 0 0 5px 1px #131313;
+    cursor: pointer;
 }
 
 .btn-nav:active{
-    background-color: #393e41;
-    padding: 6px;
-    border: 0;
-    color: #f6f7eb;
+    transform: scale(0.97);
+    padding: 10px;
     font-weight: bold;
+    border: 1px solid #282828;
+    background: linear-gradient(340deg, #131313 0%, #212121 100%);
+    color: white;
     border-radius: 6px;
 }
 .title{
     font-size: 24px;
     font-weight: bold;
     margin: 0;
+    width: 10%;
 }
 @media only screen and (max-width: 600px) {
     .title{
-        font-size: 18px;
-        font-weight: bold;
+        width: 20%;
     }
+
 }

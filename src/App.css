@@ -7,11 +7,13 @@
   margin: 0;
   text-align: center;
   justify-content: center;
-  background-color: #00171f;
+  background-color: #0f0f0f;
   display: flex;
   flex-direction: column;
-  color: #f6f7eb;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  height: 100vh;
+  color: #ffffff;
+  background: linear-gradient(330.7deg, #131313 50%, #222222 100%);
+
 }
 
 
@@ -29,25 +31,15 @@
 
 }
 
-.goTop{
-  position:sticky;
-  width: fit-content;
-  bottom: 10px;
-  left: 88.5%;
-  border: 0;
-  background-color: #1A181B;
-  text-decoration: none;
-  color: #CDD7D6;
-  padding: 10px;
-  padding-bottom: 7px;
-  border-radius: 10px;
-  padding-top: 12px;
-}
+
 
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
+.App{
+  height: auto;
+  padding-bottom: 25px;
+}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

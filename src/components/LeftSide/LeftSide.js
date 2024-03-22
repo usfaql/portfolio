@@ -1,38 +1,127 @@
 import React from 'react'
 import './style.css'
-import me from '../assets/Profile.jpg';
+import me from '../assets/Profile.png';
+import imgHtml from '../assets/skills/html.png'
+import imgCss from '../assets/skills/css-3.png'
+import imgExpress from '../assets/skills/Expressjs.png'
+import imgGit from '../assets/skills/Git.png'
+import imgJs from '../assets/skills/js.png'
+import imgMongoDB from '../assets/skills/MongoDB.png'
+import imgNodeJs from '../assets/skills/Nodejs.png'
+import imgPostgreSQL from '../assets/skills/Postgresql.png'
+import imgPostman from '../assets/skills/Postman.png'
+import imgReact from '../assets/skills/react.png'
+import gmail from "../assets/gmail.png"
+import linkedIn from "../assets/linkedin.png"
+import gitGu from "../assets/github.png"
+import phone from "../assets/phone.png"
 
 function LeftSide() {
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: 'smooth'
-    });
-  };
+ 
   return (
-    <div className='left-side'>
-      <div className='center-info'>
-      <div className='container-info'>
-        <div style={{height:"40%"}}>
-        <img src={me} style={{width :"30%",height:"30%", borderRadius:"100%"}}/>
-        </div>
-        <div style={{height:"25%", display:"flex", flexDirection:"column", justifyContent:"center"}}>
-        <div style={{display:"flex", textAlign:"center", alignItems:"center", justifyContent:"center"}}>
-          <h4 className='hi'>Hi! <span style={{color:"#f6f7eb"}}>My name is </span> Yousef Abuaqel</h4>
-        </div>
+    <div className='container-page'>
+      <div className='container-card-one'>
+
+        <div className='card-me'>
         
-        <div  style={{padding:"25px", color:"#393e41", display:"flex", justifyContent:"center", alignItems:"center" }} >
-          <p className="typing-effect" style={{fontSize:"18px",textAlign:"start", fontWeight:"500"}}>I'm a passionate <span style={{color:'#e94f37', fontWeight:"bold"}}>full-stack developer</span> with expertise in building scalable and efficient web applications. My tech stack includes React.js for the frontend, Node.js with Express.js for the backend, and MongoDB for data storage. I also have skills in JavaScript, HTML, and CSS.</p>
+        <div className='container-image'>
+          <img className='image-me' src={me}/>
         </div>
+        <div className='container-me'>
+          <h5 className='p'>A WEB DEVELOPER</h5>
+          <h1 className='name'>Yousef Abuaqel.</h1>
+          <p className='p'>I am a full-stack developer with a passion for creating innovative web solutions.</p>
         </div>
+
+        </div>
+
+
+        <div className='right-card'>
+        <div className='news-bar'>
+        If there a will, there is a way
+        </div>
+
+        <div className='container-two-card'>
+          <div className='card-credentials cont'>
+          <img style={{maxWidth:"100%", margin:"auto auto 16px auto"}} src='https://wpriverthemes.com/gridx/wp-content/uploads/2023/04/sign.png'/>
+
+            <div className='container-action-go'>
+              <div className='container-action'>
+                <h5  style={{fontSize:"12px", textTransform:"uppercase", color:"#BCBCBC", opacity:"0.7", letterSpacing:"1.1px"}}>More ABOUT ME</h5>
+                <h1 className='name' style={{fontSize:"20px", fontWeight:"500px"}}>Credentials</h1>
+              </div>
+              <div className='container-go'>
+              <img src='https://wpriverthemes.com/gridx/wp-content/themes/gridx/assets/images/icon.svg'/>
+              </div>
+            </div>
+          </div>
+    
+          <div className='card-credentials cont'>
+          <img style={{maxWidth:"100%", margin:"auto auto 16px auto"}} src='https://wpriverthemes.com/gridx/wp-content/uploads/2023/04/my-works.png'/>
+
+            <div className='container-action-go'>
+              <div className='container-action'>
+                <h5  style={{fontSize:"12px", textTransform:"uppercase", color:"#BCBCBC", opacity:"0.7", letterSpacing:"1.1px"}}>SHOWCASE</h5>
+                <h1 className='name' style={{fontSize:"20px", fontWeight:"500px"}}>Projects</h1>
+              </div>
+              <div className='container-go'>
+              <img src='https://wpriverthemes.com/gridx/wp-content/themes/gridx/assets/images/icon.svg'/>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
         
-        <button className='contact-btn' onClick={scrollToBottom}>Contact Me</button>
+        </div>
         
       </div>
-      </div>
+
+    <div className='container-card-two'>
+
+      <div className='container-skills'>
+        <div className='container-skills-image'>
+          <img className='skills-images' src={imgReact} />
+          <img className='skills-images' src={imgHtml} />
+          <img className='skills-images' src={imgCss} />
+          <img className='skills-images' src={imgJs} style={{borderRadius:"4px"}}/>
+          <img className='skills-images' src={imgNodeJs} style={{background:"white", padding:"5px", borderRadius:"4px"}} />
+          <div className='skills-images'>ExpressJs</div>
+          <img className='skills-images' src={imgPostgreSQL} />
+          <img className='skills-images dv' src={imgMongoDB} style={{background:"white", padding:"5px", borderRadius:"4px"}}/>
+          <img className='skills-images' src={imgGit} />
+          <img className='skills-images dv' src={imgPostman} />
+        </div>
       
+      </div>
+
+      <div className='container-contact'>
+      <div style={{display:"flex", justifyContent:"center", gap:"14px"}}>
+        <img className='skills-images' src={gmail} style={{width:"64px", cursor:"pointer"}}/>
+        <img className='skills-images' src={linkedIn} style={{width:"64px", cursor:"pointer"}}/>
+      </div>
+      <div style={{display:"flex", justifyContent:"center", gap:"14px"}}>
+        <img className='skills-images' src={gitGu} style={{width:"64px", cursor:"pointer"}}/>
+        <img className='skills-images' src={phone} style={{width:"64px", cursor:"pointer"}}/>
+      </div>
+      </div>
 
     </div>
+      
+    <div className='container-card-three'>
+
+      <div className='container-contact-let cont'>
+      <div style={{display:"flex", justifyContent:"center", gap:"14px", flexDirection:"column", textAlign:"start", fontSize:"32px"}}>
+        <h2 style={{display:"block"}}>Let's</h2>
+        <h2 style={{display:"block"}}>work <span style={{color:"#5b78f6"}}>together.</span></h2>
+      </div>
+      <div className='container-go'>
+              <img src='https://wpriverthemes.com/gridx/wp-content/themes/gridx/assets/images/icon.svg'/>
+              </div>
+      </div>
+
+    </div>
+  </div>
   )
 }
 
